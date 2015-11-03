@@ -209,6 +209,7 @@ class UsersController extends AppController {
             	$this->Flash->error(__('Please, try again.'));
             	return $this->redirect('/users/login');
             }
+            debug($data);
             $this->Session->write('Auth', $data);
             return $this->redirect('/accounts');
 		}
@@ -221,7 +222,7 @@ class UsersController extends AppController {
  */
 	public function logout() {
         $this->Session->destroy();
-        return $this->redirect('/');
+        return $this->redirect('/users/login');
 	}
 
 }

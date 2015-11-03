@@ -205,13 +205,16 @@ class AccountsController extends AppController {
 	}
 
 /**
- * select method
+ * change method
  * modifie l'account courant du user
  * @throws NotFoundException
  * @return void
  */
-	public function select() {
-
+	public function change($account_id=null) {
+		if ($account_id !== null) {
+			$this->Session->write('Auth.Current_Account.id', $account_id);
+			return $this->redirect(array('action' => 'view', $account_id));
+		}
 	}
 
 /**

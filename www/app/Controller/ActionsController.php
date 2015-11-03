@@ -15,7 +15,7 @@ class ActionsController extends AppController {
  *
  * @var array
  */
-	public $components = array('Paginator', 'Flash', 'Session');
+	public $components = array('Paginator', 'Flash', 'Session', 'Tinder');
 
 /**
  * index method
@@ -210,7 +210,10 @@ class ActionsController extends AppController {
  * @return void
  */
 	public function recs() {
-
+		$this->
+		$acc_id = $this->Session->read('Auth.Current_Account.id');
+		$tinder_token = $this->Session->read('Auth.Account.'.$acc_id.'.tinder_token');
+		$this->Tinder->recs(
 	}
 
 /**
