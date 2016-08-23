@@ -45,10 +45,7 @@ class FacebookComponent extends Component {
 
         //file_put_contents('access_token.txt', $access_token);
         //file_put_contents('expires_in.txt', $expires_in);
-
-        //TODO: catch error
-
-        return array($access_token, $expires_in);
+        return $access_token;
     }
 
 } 

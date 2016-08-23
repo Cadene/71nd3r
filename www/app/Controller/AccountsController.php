@@ -225,6 +225,19 @@ class AccountsController extends AppController {
  */
 	public function connect() {
 
+		//TODO: vérifier que le token Tinder est valide
+		//      si oui ne rien pas se connecter
+
+		$fb_email = ;
+		$fb_pass = ;
+		$tmp = $this->Facebook->token($fb_email, $fb_pass);
+		$access_token = $tmp[0];
+		$expires_in = $tmp[1];
+
+		//TODO: stocker dans Session Tinder
+
+		//TODO: stocker dans la base de donnée ????
+		
 	}
 
 /**

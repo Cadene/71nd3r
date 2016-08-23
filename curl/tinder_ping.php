@@ -11,11 +11,15 @@ $headers = array(
     "os_version: 90000000001"
 );
 
-$user_id = '5417aaf41ee38cf94c158fe9';
+$args = array(
+    "lat" => 48.8534100,
+    "lon" => 2.3488000
+);
 
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, 'https://api.gotinder.com/user/'.$user_id);
-curl_setopt($ch, CURLOPT_POST, 0);
+curl_setopt($ch, CURLOPT_URL, 'https://api.gotinder.com/user/ping');
+curl_setopt($ch, CURLOPT_POST, 1);
+curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($args));
 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers); 
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 $result = curl_exec($ch) or die(curl_error($ch)); 
