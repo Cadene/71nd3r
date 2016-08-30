@@ -23,7 +23,7 @@ curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($args));
 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers); 
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 $result = curl_exec($ch) or die(curl_error($ch)); 
-
+file_put_contents('tinder_ping.json',$result);
 $rslt_array = json_decode($result);
 
 print_r($rslt_array);

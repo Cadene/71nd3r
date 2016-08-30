@@ -26,7 +26,7 @@ curl_setopt($ch, CURLOPT_POST, 1);
 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers); 
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 $result = curl_exec($ch) or die(curl_error($ch)); 
-
+file_put_contents('tinder_auth.json',$result);
 $rslt_array = json_decode($result);
 $tinder_token = $rslt_array->token;
 file_put_contents('tinder_token.txt', $tinder_token);
