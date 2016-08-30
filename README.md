@@ -12,7 +12,7 @@
 
 ### Tinder API
 
-URL: `https://api.gotinder.com
+URL: `https://api.gotinder.com`
 
 Header:
 ```
@@ -30,10 +30,10 @@ Note: `$ ruby fb_token.rb email pass > access_token.txt` to get access to tinder
 
 #### POST /auth
 
-
+Get your tinder token. (expires date?)
 
 Example: 
-`https://api.gotinder.com/auth
+`https://api.gotinder.com/auth`
 ```
 {
     "facebook_token": "CAAGm0PX4Z...",
@@ -59,10 +59,10 @@ Fail:
 
 #### GET /like/[userid]
 
-Like a user.
+Send a like to a user.
 
 Example:
-`https://api.gotinder.com/like/557ee4f42b50d9e02c...
+`https://api.gotinder.com/like/557ee4f42b50d9e02c...`
 
 Response:
 ```
@@ -77,12 +77,47 @@ or
 }
 ```
 
+#### POST /like/[userid]/super
+
+Send a superlike to a user.
+
+Example:
+`https://api.gotinder.com/like/5606d56d...43947/super/`
+```
+
+Response:
+```
+{
+    "match": true
+}
+```
+or
+```
+{
+    "match": false
+}
+```
+
+#### GET /pass/[userid]
+
+Send a dislike (swip left) to a user.
+
+Example:
+`https://api.gotinder.com/pass/557ee4f42b50d9e02c...`
+
+Response:
+```
+{
+    "status": 200
+}
+```
+
 #### POST /user/message/[matchid]
 
 Send a message to a user.
 
 Example:
-`https://api.gotinder.com/user/message/5408951d45e6ce92720a...
+`https://api.gotinder.com/user/message/5408951d45e6ce92720a...`
 ```
 {
     "message": "Cyrielle, do you like avocado?"
@@ -107,32 +142,16 @@ Response:
 Get hidden variables such as the amount of remaining likes.
 
 Example:
-`https://api.gotinder.com/meta
+`https://api.gotinder.com/meta`
 
-Response:
-```
-```
-
-#### GET /pass/[userid]
-
-Dislike (swip left) a user.
-
-Example:
-`https://api.gotinder.com/pass/557ee4f42b50d9e02c...
-
-Response:
-```
-{
-    "status": 200
-}
-```
+Response: [link](https://github.com/Cadene/71nd3r/blob/master/curl/tinder_meta.json)
 
 #### POST /user/ping
 
 Update your location.
 
 Example:
-`https://api.gotinder.com/user/ping
+`https://api.gotinder.com/user/ping`
 ```
 {
     "lat": 48.8534100,
@@ -143,6 +162,12 @@ Response:
 ```
 {
     "status": 200
+}
+```
+or
+```
+{
+    "error": "position change not significant"
 }
 ```
 
@@ -174,7 +199,7 @@ Parameters:
 </table>
 
 Example:
-`https://api.gotinder.com/profile
+`https://api.gotinder.com/profile`
 ```
 {
     "age_filter_min": 26,
@@ -207,6 +232,19 @@ Parameters:
 </table>
 
 Example:
+`https://api.gotinder.com/report/87s786edq7...`
+```
+{
+    "cause": 1
+}
+```
+
+Response:
+```
+{
+    "status": 200
+}
+```
 
 
 #### GET /recs
@@ -214,22 +252,9 @@ Example:
 Get an amount of profiles (not sorted) to like or pass.
 
 Example:
-`https://api.gotinder.com/recs
+`https://api.gotinder.com/recs`
 
-Response:
-```
-```
-
-#### POST /like/[userid]/super
-
-Example:
-`https://api.gotinder.com/like/5606d56d...43947/super/
-```
-{}
-```
-
-Response:
-```
+Response: [link](https://github.com/Cadene/71nd3r/blob/master/curl/tinder_recs.json)
 ```
 
 #### POST /updates
@@ -237,7 +262,7 @@ Response:
 Get all your matches associated with your messages since a certain date.
 
 Example:
-`https://api.gotinder.com/updates
+`https://api.gotinder.com/updates`
 ```
 {
     "last_activity_date": "2015-10-30T09:32:41.154Z"
@@ -250,7 +275,7 @@ or
 }
 ```
 
-Response:
+Response: [link](https://github.com/Cadene/71nd3r/blob/master/curl/tinder_updates.json)
 ```
 {
     "matches": [{
@@ -288,16 +313,15 @@ Response:
 Get informations about a certain user.
 
 Example:
-`https://api.gotinder.com/user/5606d56d...
+`https://api.gotinder.com/user/5606d56d...`
 
-Response:
-```
-```
+Response: [link](https://github.com/Cadene/71nd3r/blob/master/curl/tinder_user.json)
 
 
+### Usefull links
 
-+ `https://gist.github.com/rtt/10403467
-+ `https://github.com/charliewolf/pynder
++ `https://gist.github.com/rtt/10403467`
++ `https://github.com/charliewolf/pynder`
 
 ### Pyramid
 
