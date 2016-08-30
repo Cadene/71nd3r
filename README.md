@@ -83,7 +83,6 @@ Send a superlike to a user.
 
 Example:
 `https://api.gotinder.com/like/5606d56d...43947/super/`
-```
 
 Response:
 ```
