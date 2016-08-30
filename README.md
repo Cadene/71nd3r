@@ -156,7 +156,7 @@ Example:
     "lat": 48.8534100,
     "lon": 2.3488000
 }
-```
+``
 
 Response:
 ```
@@ -207,7 +207,7 @@ Example:
     "age_filter_max": 32,
     "distance_filter": 14
 }
-``
+```
 
 Response:
 ```
@@ -255,7 +255,7 @@ Example:
 `https://api.gotinder.com/recs`
 
 Response: [link](https://github.com/Cadene/71nd3r/blob/master/curl/tinder_recs.json)
-```
+
 
 #### POST /updates
 
