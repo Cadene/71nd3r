@@ -1,6 +1,6 @@
-# 71nd3r hack
+# 71nd3r
 
-*71nd3r hack* is an improved online interface for tinder, incorporing a powerfull Convolutional Neural Network.
+*71nd3r* is an improved online interface for tinder, incorporing a powerfull Convolutional Neural Network.
 
 ## Installation
 
@@ -320,9 +320,9 @@ Response: [link](https://github.com/Cadene/71nd3r/blob/master/curl/tinder_user.j
 
 ### Usefull links
 
-+ `https://gist.github.com/rtt/10403467`
-+ `https://github.com/charliewolf/pynder`
++ https://gist.github.com/rtt/10403467
++ https://github.com/charliewolf/pynder
 
 ### Pyramid
 
-+ `https://github.com/uralbash/awesome-pyramid
++ https://github.com/uralbash/awesome-pyramid
